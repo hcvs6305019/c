@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main(int argc, char *argv[]) {
+int a,m[6],i; 
+printf("請輸入一個數");
+scanf("%d",&a);
+for(i=0;i<6;i++)
+srand(time(NULL));
+m[i]=rand()%49+1;
+for(i=0;i<6;i++)
+printf("m[%d]=%d\n",i,m[i]);
+printf("%2d,%2d", a,m);
+if (a==m) printf("答對!"); 
+else printf("答錯");
+	return 0;
+}
